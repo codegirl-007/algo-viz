@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Time Complexity Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Select Algorithm</h2>
+      <select id="algorithm-selector">
+        <option value="-">--</option>
+        <option value="bubbleSort">Bubble Sort</option>
+        <option value="mergeSort">Merge Sort</option>
+        <option value="quickSort">Quick Sort</option>
+        <option value="insertionSort">Insertion Sort</option>
+        <option value="selectionSort">Selection Sort</option>
+        <option value="shellSort">Shell Sort</option>
+        <option value="heapSort">Heap Sort</option>
+        <option value="timSort">Tim Sort</option>
+        <option value="radixSort">Radix Sort</option>
+        <option value="cocktailShakerSort">Cocktail Shaker Sort</option>
+      </select>
+
+      <h2>Input Settings</h2>
+      <label for="array-size">Array Size:</label>
+      <input type="range" id="array-size" min="5" max="50" value="10">
+      <span id="array-size-value">10</span>
+
+      <button id="generate-data">Generate Data</button>
+
+      <h2>Controls</h2>
+      <div class="controls">
+        <button id="play-pause">Play</button>
+        <button id="reset">Reset</button>
+      </div>
+    </aside>
+
+    <!-- Visualization Area -->
+    <section class="visualization-area">
+      <canvas id="visualization"></canvas>
+    </section>
+
+    <!-- Metrics Display -->
+    <section class="metrics-display">
+      <h2>Metrics</h2>
+      <p>Comparisons: <span id="comparisons">0</span></p>
+      <p>Swaps: <span id="swaps">0</span></p>
+      <h3>Time Complexity</h3>
+        <p id="time-complexity-best">Best: -</p>
+        <p id="time-complexity-average">Average: -</p>
+        <p id="time-complexity-worst">Worst: -</p>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
